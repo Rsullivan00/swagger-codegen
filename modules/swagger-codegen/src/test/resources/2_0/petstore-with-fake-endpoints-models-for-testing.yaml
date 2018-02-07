@@ -1432,6 +1432,8 @@ definitions:
         $ref: '#/definitions/OuterString'
       my_boolean:
         $ref: '#/definitions/OuterBoolean'
+      metadata:
+        type: object
   OuterNumber:
     type: number
   OuterString:
