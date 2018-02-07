@@ -144,7 +144,7 @@ public class ElixirClientCodegen extends DefaultCodegen implements CodegenConfig
         typeMapping.put("map", "Map");
         typeMapping.put("array", "List");
         typeMapping.put("list", "List");
-        // typeMapping.put("object", "Map");
+        typeMapping.put("object", "Map");
         typeMapping.put("binary", "String");
         typeMapping.put("ByteArray", "String");
         typeMapping.put("UUID", "String");
@@ -463,8 +463,7 @@ public class ElixirClientCodegen extends DefaultCodegen implements CodegenConfig
         } else if (p instanceof DateTimeProperty) {
             return "DateTime.t";
         } else if (p instanceof ObjectProperty) {
-            // How to map it?
-            return super.getTypeDeclaration(p);
+            return "%{}";
         } else if (p instanceof IntegerProperty) {
             return "integer()";
         } else if (p instanceof LongProperty) {

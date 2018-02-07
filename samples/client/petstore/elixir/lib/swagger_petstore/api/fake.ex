@@ -254,7 +254,7 @@ defmodule SwaggerPetstore.Api.Fake do
   ## Parameters
 
   - connection (SwaggerPetstore.Connection): Connection to server
-  - param (Object): request body
+  - param (%{}): request body
   - opts (KeywordList): [optional] Optional parameters
 
   ## Returns
@@ -262,7 +262,7 @@ defmodule SwaggerPetstore.Api.Fake do
   {:ok, %{}} on success
   {:error, info} on failure
   """
-  @spec test_inline_additional_properties(Tesla.Env.client, SwaggerPetstore.Model.Object.t, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
+  @spec test_inline_additional_properties(Tesla.Env.client, %{}, keyword()) :: {:ok, nil} | {:error, Tesla.Env.t}
   def test_inline_additional_properties(connection, param, _opts \\ []) do
     %{}
     |> method(:post)
